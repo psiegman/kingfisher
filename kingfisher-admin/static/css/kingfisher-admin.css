@@ -1,0 +1,82 @@
+.kingfisher-admin-page {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 200px 1fr;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(228, 229, 230);
+}
+
+.header {
+    background-color: white;
+    grid-column: span 2; 
+    padding: 10pt;
+}
+
+.menu {
+    background-color: rgb(41, 54, 61);
+    grid-column: span 1; 
+    padding: 10px;
+    color: white;
+}
+
+.menu li {
+    text-decoration: none;
+}
+
+.main {
+    /* background-color: rgb(21, 27, 30); */
+    grid-column: span 1; 
+    padding: 10px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition-property: opacity;
+    transition-duration: .25s;
+  }
+  
+  .fade-enter-active {
+    transition-delay: .25s;
+  }
+  
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
+
+.breadcrumbs {
+    padding-left: 4pt;
+}
+
+.breadcrumb {
+    padding: 4pt 0pt 4pt 0pt;
+    display: inline;    
+    background-color: inherit;
+}
+
+.breadcrumb::after {
+    content: " » ";
+}
+
+.richtext {
+    background-color: white;
+    width: 80%;
+}
+
+.ql-toolbar {
+    width: 80%;
+}
+
+.catalog-tileset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    background-color: rgb(228, 229, 230);
+}
+
+.catalog-tile {
+    grid-column: span 1;
+    padding: 20px;
+    border-radius: 3pt;
+    background-color: white;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}

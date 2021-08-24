@@ -1,0 +1,17 @@
+type Cms {
+	userContext: UserContext!
+	cmsContent: CmsContent!
+}
+
+type CmsContent {
+	# get all available schemas
+    schemas: [Schema]!
+
+	# get the schema with the given key, or null if not found
+	schema(key: String): Schema
+}
+
+
+type UserContext {
+	locale: String!
+}

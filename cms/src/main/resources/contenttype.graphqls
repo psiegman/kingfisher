@@ -1,0 +1,40 @@
+type ContentType {
+	id: ID!
+	key: String!
+	schema: Schema!
+	name: String
+	description: String
+	fieldDefinitions: [FieldDefinition]!
+}
+
+input CreateContentTypeInput {
+	key: String!
+	schemaKey: String!
+	name: String
+	description: String
+}
+
+type CreateContentTypePayload {
+	contentType: ContentType
+}
+
+input UpdateContentTypeInput {
+	key: String!
+	schemaKey: String!
+	name: String
+	description: String
+}
+
+type UpdateContentTypePayload {
+	contentType: ContentType
+}
+
+input DeleteContentTypeInput {
+	key: String!
+	schemaKey: String!
+}
+
+type DeleteContentTypePayload {
+	contentType: ContentType
+}
+

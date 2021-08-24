@@ -1,0 +1,25 @@
+Schema
+{"key":"_kingfisher", "name":"Kingfisher Schema","description": "Schema for Kingfisher content"}
+
+Catalog
+{"schema": "_kingfisher","key":"admin", "name":"Kingfisher Admin Content", "description": "The content for the Kingfisher admin application"}
+{"schema": "_kingfisher","key":"web", "name":"Kingfisher Web Content", "description": "The content for the Kingfisher website"}
+
+CatalogVersion
+{"schema": "_kingfisher", "catalog": "admin", "key":"draft"}
+{"schema": "_kingfisher", "catalog": "admin", "key":"published"}
+{"schema": "_kingfisher", "catalog": "web", "key":"draft"}
+{"schema": "_kingfisher", "catalog": "web", "key":"published"}
+
+ContentType
+{"schema":"_kingfisher","key":"article", "fieldDefinitions":[{"key": "title", "fieldType":"STRING"},{"key": "author", "fieldType":"STRING"},{"key": "content", "fieldType":"TEXT"}]}
+{"schema":"_kingfisher","key":"label", "fieldDefinitions":[{"key": "value", "fieldType":"L_STRING"}]}
+
+ContentItem
+{"schema":"_kingfisher", "catalog": "admin", "catalogVersion": "draft", "key":"article.about", "name": "The About page", "description": "The About page of the Kingfisher CMS", "contentType": "article", "fields": {"title": {"value": {"content": "About Kingfisher"}}, "author": {"value": {"content": "P. Siegmann"}}, "content": {"value": {"mimeType": "text/html", "content": "<h1>Kingfisher</h1>Welcome to Kingfisher CMS !"}}}}
+{"schema":"_kingfisher", "catalog": "admin", "catalogVersion": "draft", "key":"article.article_1", "contentType": "article", "fields": {"title": {"value": {"content": "test article title"}}, "author": {"value": {"content": "author of a test article"}}, "content": {"value": {"mimeType": "text/html", "content": "<h1>Hello,world!</h1>content of a test article"}}}}
+{"schema":"_kingfisher", "catalog": "admin", "catalogVersion": "draft", "key":"article.article_2", "contentType": "article", "fields": {"title": {"value": {"content": "second article title"}}, "author": {"value": {"content": "author of a second test article"}}}}
+{"schema":"_kingfisher", "catalog": "admin", "catalogVersion": "draft", "key":"label.login.username","contentType":"label","fields":{"value":{"value":{"en_US":"username","nl_NL":"gebruikersnaam"}}}}
+{"schema":"_kingfisher", "catalog": "admin", "catalogVersion": "draft", "key":"label.login.password","contentType":"label","fields":{"value":{"value":{"en_US":"password","nl_NL":"wachtwoord"}}}}
+
+{"schema":"_kingfisher", "catalog": "web", "catalogVersion": "draft", "key":"articles.about", "name": "The about page", "description": "The About page of the Kingfisher CMS", "contentType": "article", "fields": {"title": {"value": {"content": "About Kingfisher"}}, "author": {"value": {"content": "P. Siegmann"}}, "content": {"value": {"mimeType": "text/html", "content": "<h1>Kingfisher</h1>Welcome to Kingfisher CMS !"}}}}

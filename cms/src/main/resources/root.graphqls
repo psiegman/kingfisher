@@ -1,0 +1,36 @@
+schema {
+	query: RootQuery
+	mutation: RootMutation
+}
+
+	
+type RootQuery {
+
+	cms: Cms!	
+	pets: [Pet]!
+}
+
+
+type RootMutation {
+	createSchema(input: CreateSchemaInput!): CreateSchemaPayload
+	updateSchema(input: UpdateSchemaInput!): UpdateSchemaPayload
+	deleteSchema(input: DeleteSchemaInput!): DeleteSchemaPayload
+
+	createContentType(input: CreateContentTypeInput!): CreateContentTypePayload
+	updateContentType(input: UpdateContentTypeInput!): UpdateContentTypePayload
+	deleteContentType(input: DeleteContentTypeInput!): DeleteContentTypePayload
+	
+	createFieldDefinition(input: CreateFieldDefinitionInput!): CreateFieldDefinitionPayload
+	updateFieldDefinition(input: UpdateFieldDefinitionInput!): UpdateFieldDefinitionPayload
+	deleteFieldDefinition(input: DeleteFieldDefinitionInput!): DeleteFieldDefinitionPayload
+
+	createCatalog(input: CreateCatalogInput!): CreateCatalogPayload
+	updateCatalog(input: UpdateCatalogInput!): UpdateCatalogPayload
+	deleteCatalog(input: DeleteCatalogInput!): DeleteCatalogPayload
+
+	createCatalogVersion(input: CreateCatalogVersionInput!): CreateCatalogVersionPayload
+	updateCatalogVersion(input: UpdateCatalogVersionInput!): UpdateCatalogVersionPayload
+	deleteCatalogVersion(input: DeleteCatalogVersionInput!): DeleteCatalogVersionPayload
+
+	updateContentItem(input: UpdateContentItemInput!): UpdateContentItemPayload
+}

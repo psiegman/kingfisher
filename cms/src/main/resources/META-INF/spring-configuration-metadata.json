@@ -1,0 +1,10 @@
+{
+	"properties": [
+		{
+			"name": "kingfisher.createAdminContentOnEmpty",
+			"type": "java.lang.Boolean",
+			"defaultValue": true,
+			"description": "Whether to create Kingfisher admin content on startup if the database is empty"
+		}
+	]
+}

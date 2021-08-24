@@ -1,0 +1,49 @@
+type FieldDefinition {
+	key: String!
+	schemaKey: String!
+	contentTypeKey: String!
+	name: String
+	description: String
+	fieldType: FieldType!
+}
+	
+enum FieldType {
+	STRING
+	TEXT
+	ISTRING
+}
+
+input CreateFieldDefinitionInput {
+	key: String!
+	schemaKey: String!
+	contentTypeKey: String!
+	name: String
+	description: String
+}
+
+type CreateFieldDefinitionPayload {
+	fieldDefinition: FieldDefinition
+}
+
+input UpdateFieldDefinitionInput {
+	key: String!
+	schemaKey: String!
+	contentTypeKey: String!
+	name: String
+	description: String
+}
+
+type UpdateFieldDefinitionPayload {
+	fieldDefinition: FieldDefinition
+}
+
+input DeleteFieldDefinitionInput {
+	key: String!
+	schemaKey: String!
+	contentTypeKey: String!
+}
+
+type DeleteFieldDefinitionPayload {
+	fieldDefinition: FieldDefinition
+}
+

@@ -1,0 +1,67 @@
+type ContentItem {
+	id: ID!
+	key: String!
+	contentType: ContentType!
+	catalogVersion: CatalogVersion!
+	fields: [Field]!
+	name: String
+	description: String
+	
+}
+
+type Field {
+	key: String!
+	value: FieldValue
+	fieldDefinition: FieldDefinition!
+}
+
+union FieldValue = StringFieldValue | LocalizedStringFieldValue | TextFieldValue
+
+#interface FieldValue {
+#}
+
+#  implements FieldValue {
+type StringFieldValue {
+	content: String
+}
+
+type LocalizedStringFieldValue {
+
+	# Content for the request locale
+	content: String
+	
+	# Content for all available locales
+	contents: [LocalizedString!]!
+}
+
+type LocalizedString {
+	locale: String!
+	value: String
+}
+
+type TextFieldValue {
+	mimeType: String
+	content: String
+}
+
+
+input UpdateContentItemInput {
+	contentItemKey: String!
+	catalogVersionKey: String!
+	catalogKey: String!
+	schemaKey: String!
+	fields: [UpdateFieldValueInput]!
+}
+
+input UpdateFieldValueInput {
+	fieldKey: String!
+	fieldValue: String
+}
+
+type UpdateContentItemPayload {
+	contentItem: ContentItem
+}
+
+#type UpdateFieldPayload {
+#	contentItem: contentItem
+#}

@@ -1,0 +1,46 @@
+type CatalogVersion {
+	id: ID!
+	key: String!
+	catalog: Catalog!
+	name: String
+	description: String
+	nrContentItems: Int
+	contentItems: [ContentItem]!
+	contentItem(key: String!): ContentItem
+}
+
+
+input CreateCatalogVersionInput {
+	key: String!
+	schemaKey: String!
+	catalogKey: String!
+	name: String
+	description: String
+}
+
+type CreateCatalogVersionPayload {
+	catalogVersion: CatalogVersion
+}
+
+input UpdateCatalogVersionInput {
+	key: String!
+	schemaKey: String!
+	catalogKey: String!
+	name: String
+	description: String
+}
+
+type UpdateCatalogVersionPayload {
+	catalogVersion: CatalogVersion
+}
+
+input DeleteCatalogVersionInput {
+	key: String!
+	schemaKey: String!
+	catalogKey: String!
+}
+
+type DeleteCatalogVersionPayload {
+	catalogVersion: CatalogVersion
+}
+

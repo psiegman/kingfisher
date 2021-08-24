@@ -1,0 +1,41 @@
+type Catalog {
+	id: ID!
+	key: String!
+	schema: Schema
+	name: String
+	description: String
+	catalogVersions: [CatalogVersion]!
+	catalogVersion(key: String!): CatalogVersion
+}
+
+input CreateCatalogInput {
+	key: String!
+	schemaKey: String!
+	name: String
+	description: String
+}
+
+type CreateCatalogPayload {
+	catalog: Catalog
+}
+
+input UpdateCatalogInput {
+	key: String!
+	schemaKey: String!
+	name: String
+	description: String
+}
+
+type UpdateCatalogPayload {
+	catalog: Catalog
+}
+
+input DeleteCatalogInput {
+	key: String!
+	schemaKey: String!
+}
+
+type DeleteCatalogPayload {
+	catalog: Catalog
+}
+

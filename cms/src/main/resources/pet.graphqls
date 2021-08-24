@@ -1,0 +1,13 @@
+interface Pet {
+	name: String!
+}
+
+type Cat implements Pet {
+	name: String!
+	meow: String
+}	
+
+type Dog implements Pet {
+	name: String!
+	bark: String
+}	

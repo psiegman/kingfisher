@@ -1,0 +1,41 @@
+# Contains the types and catalogs
+type Schema {
+	id: ID!
+	key: String!
+	name: String
+	description: String
+	catalogs: [Catalog]!
+	catalog(key: String!): Catalog
+	contentTypes: [ContentType]!
+	contentType(key: String!): ContentType
+}
+
+
+input CreateSchemaInput {
+	key: String!
+	name: String
+	description: String
+}
+
+type CreateSchemaPayload {
+	schema: Schema
+}
+
+input UpdateSchemaInput {
+	key: String!
+	name: String
+	description: String
+}
+
+type UpdateSchemaPayload {
+	schema: Schema
+}
+
+input DeleteSchemaInput {
+	key: String!
+}
+
+type DeleteSchemaPayload {
+	schema: Schema
+}
+
